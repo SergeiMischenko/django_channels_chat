@@ -5,7 +5,7 @@ class MyUserManager(BaseUserManager):
 
     def create_user(self, email, password=None):
         if not email:
-            raise ValueError('Email must be provided')
+            raise ValueError("Email must be provided")
 
         user = self.model(email=self.normalize_email(email))
         user.set_password(password)
