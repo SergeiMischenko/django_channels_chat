@@ -14,8 +14,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
-    'channels',
-    'daphne',
+    "channels",
+    "daphne",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -55,7 +55,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "django_channels_chat.wsgi.application"
-ASGI_APPLICATION = 'django_channels_chat.asgi.application'
+ASGI_APPLICATION = "django_channels_chat.asgi.application"
 
 DATABASES = {
     "default": {
