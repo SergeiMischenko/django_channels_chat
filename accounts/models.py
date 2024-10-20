@@ -3,6 +3,8 @@ from django.core.validators import RegexValidator
 from django.db import models
 from django.utils import timezone
 
+from accounts.manager import MyUserManager
+
 
 class User(AbstractBaseUser):
     email = models.EmailField(max_length=255, unique=True)
@@ -17,6 +19,9 @@ class User(AbstractBaseUser):
     phone_number = models.CharField(
         validators=[phone_regex], max_length=12, null=True, blank=True
     )
+
+    objects = MyUserManager()
+
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
 
